@@ -153,7 +153,7 @@ http://www.hadoopor.com/redirect.php?tid=5473&goto=lastpost (best one in Chinese
 
 http://dogdogfish.com/2014/04/26/installing-hadoop-2-4-on-ubuntu-14-04/
 
-http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-install/(about yarn installation)
+http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-install/ (about yarn installation)
 
 http://www.highlyscalablesystems.com/3597/hadoop-installation-tutorial-hadoop-2-x/
 
