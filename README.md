@@ -22,7 +22,7 @@ Three big steps: install packages and config them and hadoop xml files.
 * ssh-keygen -t rsa -P ""
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
-* 
+
 ##disable ipv6
 
 * sudo vi /etc/sysctl.conf
@@ -43,7 +43,9 @@ add following lines
 * tar -xzf hadoop-2.6.0.tar.gz
 * ln -s /usr/local/hadoop-2.6.0 /usr/local/hadoop
 
-##install java 1.7 for all machines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
+##install java 1.7 for all machines. 
+
+we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
 * sudo add-apt-repository ppa:webupd8team/java
 * sudo apt-get update
