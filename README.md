@@ -47,7 +47,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 ##### on master
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
-* 
+
 ##disable ipv6 for each master
 
 * sudo vi /etc/sysctl.conf
@@ -56,17 +56,17 @@ Three big steps: install packages and config them and hadoop xml files. I used t
     - net.ipv6.conf.default.disable_ipv6 = 1
     - net.ipv6.conf.lo.disable_ipv6 = 1
 
-####run
+##### run
 * sudo service networking restart 
 
-##download hadoop
+##download hadoop for each machine (once one dowloaded you can use scp to copy to others)
 * su - hduser
 * cd /usr/local
 * wget http://mirror.reverse.net/pub/apache/hadoop/common/stable2/hadoop-2.6.0.tar.gz 
 * tar -xzf hadoop-2.6.0.tar.gz
 * ln -s /usr/local/hadoop-2.6.0 /usr/local/hadoop
 
-##install java 1.7 for all machines. 
+##install java 1.7 for all machines. (once one dowloaded you can use scp to copy to others)
 
 we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
