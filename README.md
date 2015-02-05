@@ -22,6 +22,7 @@ Three big steps: install packages and config them and hadoop xml files.
 * ssh-keygen -t rsa -P ""
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
+* 
 ##disable ipv6
 
 * sudo vi /etc/sysctl.conf
@@ -33,6 +34,7 @@ add following lines
 ** net.ipv6.conf.lo.disable_ipv6 = 1
 ###run
 * sudo service networking restart 
+
 ##download hadoop
 * su - hduser
 * cd /usr/local
@@ -46,12 +48,15 @@ add following lines
 * sudo apt-get update
 * sudo apt-get install oracle-java7-installer
 * sudo update-java-alternatives -s java-7-oracle
+
 ### antoher way
 * su - hduser
 * cd cd /usr/local
 * wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
 * tar -xzf jdk-7u75-linux-x64.tar.gz
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
+
+
 
 1.2 install hadoop for all machines
 
