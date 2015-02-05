@@ -66,20 +66,16 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 
 #### add following lines
 
-*export HADOOP_HOME=/usr/local/hadoop
-*export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-*export JAVA_HOME=/usr/local/jdk
-*export CLASSPATH=$JAVA_HOME/lib/tools.jar
-*export PATH=$JAVA_HOME/bin:$PATH
+* export HADOOP_HOME=/usr/local/hadoop
+* export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+* export JAVA_HOME=/usr/local/jdk
+* export CLASSPATH=$JAVA_HOME/lib/tools.jar
+* export PATH=$JAVA_HOME/bin:$PATH
 
-1.2 install hadoop for all machines
+##config hadoop xml files.
 
-2, config path for java and hadoop
-
-3, config hadoop xml files.
-
-refs:
-for hadoop instllation
+##refs
+###for hadoop instllation
 http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good for single node but no yarn)
 
 http://disi.unitn.it/~lissandrini/notes/installing-hadoop-on-ubuntu-14.html (vert clear and easy to follow)
@@ -98,15 +94,16 @@ http://blog.csdn.net/stark_summer/article/details/42424279
 
 http://www.hadoopor.com/redirect.php?tid=5473&goto=lastpost (best one in Chinese)
 
-
-
-
 http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/(classic but kind of old)
 
-from Apache
-single node
+##from Apache
+
+###single node
+
 http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
-cluster
+
+###cluster
+
 http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html
 
 
