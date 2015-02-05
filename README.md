@@ -2,7 +2,7 @@
 steps and nececry files for installing hadoop + yarn 2.6 on ubuntu 14.10
 
 I collected many instructions as I could (see the refs below) but select the steps I like and put them here (It is kind of like cherry pick). Those steps are tested on my hadoop cluster. It works perfect.
-Three big steps: install packages and config them and hadoop xml files.
+Three big steps: install packages and config them and hadoop xml files. I used tmux with the function of synchronize-panes for setting all the machines.
 
 ##machines
 * pocoyo-1 192.168.1.72 (master)
