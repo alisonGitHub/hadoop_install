@@ -3,8 +3,16 @@ steps and nececry files for installing hadoop + yarn 2.6 on ubuntu 14.10
 
 Three big steps: install packages and config them and hadoop xml files.
 
-1, install packages for ssh, java and hadoop and 
-1.1 install java 1.7 for all checines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
+1, install packages for ssh, java and hadoop.
++ creat hadoop user and user group
++ 
+
+
++ install ssh
+ 
+sudo apt-get intall openssh-server 
+
++ install java 1.7 for all machines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
