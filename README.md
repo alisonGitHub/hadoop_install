@@ -27,7 +27,8 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * sudo adduser hduser sudo
 * sudo chown -R hduser:hadoop /usr/local/
 
-##install ssh for each machine
+##install ssh for each machine 
+(the following is not a secure way but it faster for test purpose)
 
 * su - hduser
 * sudo apt-get intall openssh-server 
@@ -48,7 +49,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
 
-##disable ipv6 for each master
+##disable ipv6 for each machine
 
 * sudo vi /etc/sysctl.conf
   * add following lines
