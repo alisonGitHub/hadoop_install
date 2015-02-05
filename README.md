@@ -15,7 +15,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
     - pocoyo-1
 
 * sudo vi /etc/hosts
-  - add folowing lines, for  master
+  - add folowing lines, for  each machine or use scp to others
     - 127.0.0.1 localhost
     - pocoyo-1 192.168.1.72 # nameNode
     - pocoyo-2 192.168.1.52 # secondary namdNode
