@@ -38,12 +38,10 @@ Three big steps: install packages and config them and hadoop xml files.
 ##disable ipv6 for each machine
 
 * sudo vi /etc/sysctl.conf
- 
-add following lines
-
-  - net.ipv6.conf.all.disable_ipv6 = 1
-  - net.ipv6.conf.default.disable_ipv6 = 1
-  - net.ipv6.conf.lo.disable_ipv6 = 1
+  * add following lines
+    - net.ipv6.conf.all.disable_ipv6 = 1
+    - net.ipv6.conf.default.disable_ipv6 = 1
+    - net.ipv6.conf.lo.disable_ipv6 = 1
 
 ####run
 * sudo service networking restart 
