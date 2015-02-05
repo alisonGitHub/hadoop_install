@@ -59,14 +59,17 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 ##### run
 * sudo service networking restart 
 
-##download hadoop for each machine (once one dowloaded you can use scp to copy to others)
+##download hadoop for each machine 
+(once one dowloaded you can use scp to copy to others)
 * su - hduser
 * cd /usr/local
 * wget http://mirror.reverse.net/pub/apache/hadoop/common/stable2/hadoop-2.6.0.tar.gz 
 * tar -xzf hadoop-2.6.0.tar.gz
 * ln -s /usr/local/hadoop-2.6.0 /usr/local/hadoop
 
-##install java 1.7 for all machines. (once one dowloaded you can use scp to copy to others)
+##install java 1.7 for all machines. 
+
+(once one dowloaded you can use scp to copy to others)
 
 we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
