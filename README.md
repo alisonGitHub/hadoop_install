@@ -91,6 +91,32 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
     * export PATH=$JAVA_HOME/bin:$PATH
 
 ##config hadoop xml files.
+#### modify $HADOOP_HOME/etc/hadoop/hadoop-env.sh for all machines add
+* export JAVA_HOME=/usr/local/jdk
+
+#### modify $HADOOP_HOME/etc/hadoop/slaves for all machines
+* add
+  * pocoyo-1
+  * pocoyo-2
+  * pocoyo-3
+
+#### copy xml files first
+
+* cd $HADOOP_HOME
+* cp ./share/doc/hadoop/hadoop-project-dist/hadoop-common/core-default.xml ./etc/hadoop/core-site.xml
+* cp ./share/doc/hadoop/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml ./etc/hadoop/hdfs-site.xml
+* cp ./share/doc/hadoop/hadoop-yarn/hadoop-yarn-common/yarn-default.xml ./etc/hadoop/yarn-site.xml
+* cp ./share/doc/hadoop/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml ./etc/hadoop/mapred-site.xml
+
+#### modify core-site.xml
+property | value | machines
+-------- | ------ | -------
+fs.defaultFS | hdfs://pocoyo-1:9000 | all 
+hadoop.tmp.dir | /usr/local/hadoop/tmp | all
+dfs.datanode.data.dir | /usr/local/hadoop/data | all
+
+#### modify hdfs-site.xml
+
 
 ##refs
 ###for hadoop instllation
