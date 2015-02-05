@@ -163,7 +163,7 @@ http://www.linuxidc.com/Linux/2015-01/111258.htm
 
 http://blog.csdn.net/stark_summer/article/details/42424279
 
-http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/(classic but kind of old)
+http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/ (classic but kind of old)
 
 ##from Apache
 
