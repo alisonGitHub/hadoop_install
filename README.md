@@ -11,10 +11,12 @@ Three big steps: install packages and config them and hadoop xml files.
 
 ## edit host
 *sudo vi /etc/hostname
+
 ##### add machine name, for example
 pocoyo-1
 
 * sudo vi /etc/hosts
+
 #### add folowing lines
 
 ** 127.0.0.1 localhost
