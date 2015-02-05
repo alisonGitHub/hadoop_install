@@ -14,10 +14,10 @@ sudo apt-get intall openssh-server
 
 + install java 1.7 for all machines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
-->sudo add-apt-repository ppa:webupd8team/java
-->sudo apt-get update
-->sudo apt-get install oracle-java7-installer
-->sudo update-java-alternatives -s java-7-oracle
+- sudo add-apt-repository ppa:webupd8team/java
+- sudo apt-get update
+- sudo apt-get install oracle-java7-installer
+- sudo update-java-alternatives -s java-7-oracle
 
 1.2 install hadoop for all machines
 
