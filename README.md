@@ -47,21 +47,25 @@ add following lines
 
 we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
-* sudo add-apt-repository ppa:webupd8team/java
-* sudo apt-get update
-* sudo apt-get install oracle-java7-installer
-* sudo update-java-alternatives -s java-7-oracle
-
-### antoher way
 * su - hduser
 * cd cd /usr/local
 * wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
 * tar -xzf jdk-7u75-linux-x64.tar.gz
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
 
+### antoher way (I didn't try but put here for ref.)
+
+*  sudo add-apt-repository ppa:webupd8team/java
+* sudo apt-get update
+* sudo apt-get install oracle-java7-installer
+* sudo update-java-alternatives -s java-7-oracle
+
 ## edit /etc/profile
+
 * sudo vi /etc/profile
+
 #### add following lines
+
 *export HADOOP_HOME=/usr/local/hadoop
 *export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 *export JAVA_HOME=/usr/local/jdk
