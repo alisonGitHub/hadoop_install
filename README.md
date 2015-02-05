@@ -12,7 +12,7 @@ Two big steps: install packages and config them and hadoop xml files.
 
 refs:
 for hadoop instllation
-http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good)
+http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good for single node but no yarn)
 
 from Apache
 single node
