@@ -39,7 +39,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * ssh localhost
 * scp ~/.ssh/id_rsa hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
 * scp ~/.ssh/id_rsa.pub hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
-* 
+
 #### on slaves (pocoyo-2 and pocoyo-3)
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
