@@ -33,7 +33,7 @@ add following lines
 * net.ipv6.conf.default.disable_ipv6 = 1
 * net.ipv6.conf.lo.disable_ipv6 = 1
 
-###run
+####run
 * sudo service networking restart 
 
 ##download hadoop
