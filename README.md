@@ -10,27 +10,27 @@ Three big steps: install packages and config them and hadoop xml files.
 * pocoyo-3 192.168.1.44 (data node)
 
 ## edit host
-*sudo vi /etc/hostname
+* sudo vi /etc/hostname
 
-##### add machine name, for example
+##### add machine name, for example, for each machine
 pocoyo-1
 
 * sudo vi /etc/hosts
 
-#### add folowing lines
+#### add folowing lines, for each machine
 
-* 127.0.0.1 localhost
-* pocoyo-1 192.168.1.72 # master
-* pocoyo-2 192.168.1.52 # data node
-* pocoyo-3 192.168.1.44 # data node
+  * 127.0.0.1 localhost
+  * pocoyo-1 192.168.1.72 # master
+  * pocoyo-2 192.168.1.52 # data node
+  * pocoyo-3 192.168.1.44 # data node
 
-##creat hadoop user and user group for each machine
+##creat hadoop user and user group for each machine, for each machine
 * sudo addgroup hadoop
 * sudo adduser --ingroup hadoop hduser
 * sudo adduser hduser sudo
 * sudo chown -R hduser:hadoop /usr/local/
 
-##install ssh
+##install ssh for each machine
  
 * su - hduser
 * sudo apt-get intall openssh-server 
@@ -38,15 +38,15 @@ pocoyo-1
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
 
-##disable ipv6
+##disable ipv6 for each machine
 
 * sudo vi /etc/sysctl.conf
  
 add following lines
 
-* net.ipv6.conf.all.disable_ipv6 = 1
-* net.ipv6.conf.default.disable_ipv6 = 1
-* net.ipv6.conf.lo.disable_ipv6 = 1
+  * net.ipv6.conf.all.disable_ipv6 = 1
+  * net.ipv6.conf.default.disable_ipv6 = 1
+  * net.ipv6.conf.lo.disable_ipv6 = 1
 
 ####run
 * sudo service networking restart 
