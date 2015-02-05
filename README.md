@@ -11,14 +11,14 @@ Three big steps: install packages and config them and hadoop xml files.
 
 ## edit host
 * sudo vi /etc/hostname
-  - add machine name, for example, for each machine
+  - add machine name, for each machine, for example,
     - pocoyo-1
 
 * sudo vi /etc/hosts
-  - add folowing lines, for each machine
+  - add folowing lines, for  master
     - 127.0.0.1 localhost
-    - pocoyo-1 192.168.1.72 # master
-    - pocoyo-2 192.168.1.52 # data node
+    - pocoyo-1 192.168.1.72 # nameNode
+    - pocoyo-2 192.168.1.52 # secondary namdNode
     - pocoyo-3 192.168.1.44 # data node
 
 ##creat hadoop user and user group for each machine, for each machine
@@ -34,8 +34,10 @@ Three big steps: install packages and config them and hadoop xml files.
 * ssh-keygen -t rsa -P ""
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
-
-##disable ipv6 for each machine
+  * from nameNode ssh other machines
+  * from secondary namenode ssh other machines
+  
+##disable ipv6 for each master
 
 * sudo vi /etc/sysctl.conf
   * add following lines
@@ -65,22 +67,20 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 
 ### antoher way (I didn't try but put here for ref.)
 
-*  sudo add-apt-repository ppa:webupd8team/java
+* sudo add-apt-repository ppa:webupd8team/java
 * sudo apt-get update
 * sudo apt-get install oracle-java7-installer
 * sudo update-java-alternatives -s java-7-oracle
 
-## edit /etc/profile
+## edit /etc/profile for master
 
 * sudo vi /etc/profile
-
-#### add following lines
-
-* export HADOOP_HOME=/usr/local/hadoop
-* export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-* export JAVA_HOME=/usr/local/jdk
-* export CLASSPATH=$JAVA_HOME/lib/tools.jar
-* export PATH=$JAVA_HOME/bin:$PATH
+  * add following lines
+    * export HADOOP_HOME=/usr/local/hadoop
+    * export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+    * export JAVA_HOME=/usr/local/jdk
+    * export CLASSPATH=$JAVA_HOME/lib/tools.jar
+    * export PATH=$JAVA_HOME/bin:$PATH
 
 ##config hadoop xml files.
 
