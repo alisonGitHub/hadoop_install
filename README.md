@@ -28,14 +28,19 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * sudo chown -R hduser:hadoop /usr/local/
 
 ##install ssh for each machine
- 
+
 * su - hduser
 * sudo apt-get intall openssh-server 
+
+#### on master
 * ssh-keygen -t rsa -P ""
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 * ssh localhost
-  * from nameNode ssh other machines
-  * from secondary namenode ssh other machines
+* scp ~/.ssh/id_rsa hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
+* scp ~/.ssh/id_rsa.pub hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
+#### on slaves (pocoyo-2 and pocoyo-3)
+* cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+* ssh localhost
   
 ##disable ipv6 for each master
 
