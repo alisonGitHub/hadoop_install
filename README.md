@@ -113,10 +113,35 @@ property | value | machines
 -------- | ------ | -------
 fs.defaultFS | hdfs://pocoyo-1:9000 | all 
 hadoop.tmp.dir | /usr/local/hadoop/tmp | all
-dfs.datanode.data.dir | /usr/local/hadoop/data | all
+dfs.datanode.data.dir | /usr/local/hadoop/data | dataNodes
 
 #### modify hdfs-site.xml
+property | value | machines
+-------- | ------ | -------
+dfs.namenode.rpc-address | pocoyo-1:9001 | all
+dfs.namenode.secondary.http-address | pocoyo-2:50090 | namenode and seconday nameNode
+dfs.namenode.name.dir | /usr/local/hadoop/dfs/name | namenode and seconday nameNode
+dfs.datanode.data.dir | /usr/local/hadoop/data | datanodes
 
+#### modify mapered-site.xml
+property | value | machines
+-------- | ------ | -------
+mapreduce.framework.name | yarn | all
+
+#### modify yarn-site.xml
+property | value | machines
+-------- | ------ | -------
+yarn.resourcemanager.hostname | pocoyo-1 | resource manager and nodeManager
+yarn.nodemanager.hostname | 0.0.0.0 | nodemanager
+
+## start HDFs
+* cd $HADOOP_HOME/sbin
+* ./start-dfs.sh
+* jps ( for all machines to check)
+
+## start yarn
+* cd $HADOOP_HOME/sbin
+* ./start-yarn.sh
 
 ##refs
 ###for hadoop instllation
@@ -124,9 +149,11 @@ http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (
 
 http://disi.unitn.it/~lissandrini/notes/installing-hadoop-on-ubuntu-14.html (vert clear and easy to follow)
 
+http://www.hadoopor.com/redirect.php?tid=5473&goto=lastpost (best one in Chinese, I really like this one)
+
 http://dogdogfish.com/2014/04/26/installing-hadoop-2-4-on-ubuntu-14-04/
 
-http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-install/(abour yarn installation)
+http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-install/(about yarn installation)
 
 http://www.highlyscalablesystems.com/3597/hadoop-installation-tutorial-hadoop-2-x/
 
@@ -135,8 +162,6 @@ http://blog.csdn.net/zhu_xun/article/details/42077311
 http://www.linuxidc.com/Linux/2015-01/111258.htm
 
 http://blog.csdn.net/stark_summer/article/details/42424279
-
-http://www.hadoopor.com/redirect.php?tid=5473&goto=lastpost (best one in Chinese)
 
 http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/(classic but kind of old)
 
