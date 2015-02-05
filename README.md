@@ -10,8 +10,8 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * pocoyo-3 192.168.1.44 (data node)
 
 ## edit host
-* sudo vi /etc/hostname
-  - add machine name, for each machine, for example,
+* vi /etc/hostname
+  - check machine name, for each machine, for example, you can modify them if you want
     - pocoyo-1
 
 * sudo vi /etc/hosts
