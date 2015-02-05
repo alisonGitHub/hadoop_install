@@ -2,59 +2,51 @@
 steps and nececry files for installing hadoop + yarn 2.6 on ubuntu 14.10
 
 I collected many instructions as I could (see the refs below) but select the steps I like and put them here (It is kind of like cherry pick). Those steps are tested on my hadoop cluster. It works perfect.
+Three big steps: install packages and config them and hadoop xml files.
 
+##machines
 * pocoyo-1 192.168.1.72
 * pocoyo-2 192.168.1.52
 * pocoyo-3 192.168.1.44
-* 
 
-
-Three big steps: install packages and config them and hadoop xml files.
-
-install packages for ssh, java and hadoop.
-creat hadoop user and user group
+##creat hadoop user and user group for each machine
 * sudo addgroup hadoop
 * sudo adduser --ingroup hadoop hduser
 * sudo adduser hduser sudo
 * sudo chown -R hduser:hadoop /usr/local/
 
-download hadoop
+##install ssh
+ 
+* su - hduser
+* sudo apt-get intall openssh-server 
+* ssh-keygen -t rsa -P ""
+* cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+* ssh localhost
+##disable ipv6
+
+* sudo vi /etc/sysctl.conf
+ 
+add following lines
+
+** net.ipv6.conf.all.disable_ipv6 = 1
+** net.ipv6.conf.default.disable_ipv6 = 1
+** net.ipv6.conf.lo.disable_ipv6 = 1
+###run
+* sudo service networking restart 
+##download hadoop
 * su - hduser
 * cd /usr/local
 * wget http://mirror.reverse.net/pub/apache/hadoop/common/stable2/hadoop-2.6.0.tar.gz 
 * tar -xzf hadoop-2.6.0.tar.gz
 * ln -s /usr/local/hadoop-2.6.0 /usr/local/hadoop
 
-install ssh
- 
-* su -hduser
-* sudo apt-get intall openssh-server 
-* ssh-keygen -t rsa -P ""
-* cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-* ssh localhost
-
-disable ipv6
-
-*sudo vi /etc/sysctl.conf
-
-add following lines
-
-* net.ipv6.conf.all.disable_ipv6 = 1
-* net.ipv6.conf.default.disable_ipv6 = 1
-* net.ipv6.conf.lo.disable_ipv6 = 1
-run
-* sudo service networking restart 
-
-
-
-
-install java 1.7 for all machines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
+##install java 1.7 for all machines. we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJavaVersions
 
 * sudo add-apt-repository ppa:webupd8team/java
 * sudo apt-get update
 * sudo apt-get install oracle-java7-installer
 * sudo update-java-alternatives -s java-7-oracle
-* antoher way
+### antoher way
 * su - hduser
 * cd cd /usr/local
 * wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
