@@ -79,13 +79,6 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 * tar -xzf jdk-7u75-linux-x64.tar.gz
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
 
-### antoher way (I didn't try but put here for ref.)
-
-* sudo add-apt-repository ppa:webupd8team/java
-* sudo apt-get update
-* sudo apt-get install oracle-java7-installer
-* sudo update-java-alternatives -s java-7-oracle
-
 ## edit /etc/profile for master
 
 * sudo vi /etc/profile
