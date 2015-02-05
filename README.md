@@ -16,6 +16,7 @@ pocoyo-1
 
 * sudo vi /etc/hosts
 #### add folowing lines
+
 ** 127.0.0.1 localhost
 ** pocoyo-1 192.168.1.72 # master
 ** pocoyo-2 192.168.1.52 # data node
