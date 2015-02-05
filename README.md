@@ -11,4 +11,14 @@ Two big steps: install packages and config them and hadoop xml files.
 3, config hadoop xml files.
 
 refs:
+for hadoop instllation
+http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good)
+
+from Apache
+single node
+http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+cluster
+http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html
+
+
 
