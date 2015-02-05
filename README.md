@@ -59,7 +59,14 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 * tar -xzf jdk-7u75-linux-x64.tar.gz
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
 
-
+## edit /etc/profile
+* sudo vi /etc/profile
+#### add following lines
+*export HADOOP_HOME=/usr/local/hadoop
+*export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+*export JAVA_HOME=/usr/local/jdk
+*export CLASSPATH=$JAVA_HOME/lib/tools.jar
+*export PATH=$JAVA_HOME/bin:$PATH
 
 1.2 install hadoop for all machines
 
