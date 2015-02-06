@@ -76,7 +76,7 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 
 * su - hduser
 * cd cd /usr/local
-* wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
+* wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz"
 * tar -xzf jdk-7u75-linux-x64.tar.gz
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
 
@@ -90,6 +90,13 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
     * export JAVA_HOME=/usr/local/jdk
     * export CLASSPATH=$JAVA_HOME/lib/tools.jar
     * export PATH=$JAVA_HOME/bin:$PATH
+
+* source /etc/profile
+* java -version ( to test)
+
+on slaves
+* sudo scp hduser@pocoyo-1:/etc/profile /etc/profile
+* source /etc/profile
 
 ##config hadoop xml files.
 #### modify $HADOOP_HOME/etc/hadoop/hadoop-env.sh for all machines add
