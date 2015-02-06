@@ -155,6 +155,8 @@ yarn.nodemanager.hostname | 0.0.0.0 | nodemanager
 on each machne run
 * jps
 
+You should see something looks like below.
+
 ![Image of screen](https://github.com/alisonGitHub/hadoop_install/blob/master/image/hadoop.png)
 
 ##refs
