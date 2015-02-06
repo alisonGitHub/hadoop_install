@@ -152,6 +152,11 @@ yarn.nodemanager.hostname | 0.0.0.0 | nodemanager
 * cd $HADOOP_HOME/sbin
 * ./start-yarn.sh
 
+on each machne run
+* jps
+
+![Image of screen](https://github.com/alisonGitHub/hadoop_install/images/hadoop.png)
+
 ##refs
 ###for hadoop instllation
 http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good for single node but no yarn)
