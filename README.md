@@ -44,13 +44,13 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * mkdir .ssh
 
 ##### on master
-* scp ~/.ssh/* pocoyo-2:~/.ssh (do the same for pocoyo-3, this is good for a fast test not safe!)
+* scp ~/.ssh/* pocoyo-2:~/.ssh (do the same for pocoyo-3, this is good for a fast test - Not safe!)
 * ssh localhost
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
 
 ##disable ipv6 for each machine
-
+(:setw synchronize-panes in tmux wored for me)
 * sudo vi /etc/sysctl.conf
   * add following lines
     - net.ipv6.conf.all.disable_ipv6 = 1
