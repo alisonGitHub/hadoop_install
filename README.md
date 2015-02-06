@@ -50,7 +50,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * ssh hduser@pocoyo-3
 
 ##disable ipv6 for each machine
-(:setw synchronize-panes in tmux wored for me)
+(:setw synchronize-panes in tmux worked for me)
 * sudo vi /etc/sysctl.conf
   * add following lines
     - net.ipv6.conf.all.disable_ipv6 = 1
