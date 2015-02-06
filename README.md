@@ -121,7 +121,7 @@ property | value | machines
 -------- | ------ | -------
 fs.defaultFS | hdfs://pocoyo-1:9000 | all 
 hadoop.tmp.dir | /usr/local/hadoop/tmp | all
-dfs.datanode.data.dir | /usr/local/hadoop/data | dataNodes
+io.file.buffer.size | 131072 | all
 
 #### modify hdfs-site.xml
 property | value | machines
@@ -131,7 +131,7 @@ dfs.namenode.secondary.http-address | pocoyo-2:50090 | namenode and seconday nam
 dfs.namenode.name.dir | /usr/local/hadoop/dfs/name | namenode and seconday nameNode
 dfs.datanode.data.dir | /usr/local/hadoop/data | datanodes
 
-#### modify mapered-site.xml
+#### modify mapred-site.xml
 property | value | machines
 -------- | ------ | -------
 mapreduce.framework.name | yarn | all
@@ -143,8 +143,9 @@ yarn.resourcemanager.hostname | pocoyo-1 | resource manager and nodeManager
 yarn.nodemanager.hostname | 0.0.0.0 | nodemanager
 
 ## start HDFs
+* ./hdfs namenode -format
 * cd $HADOOP_HOME/sbin
-* ./start-dfs.sh
+* * ./start-dfs.sh
 * jps ( for all machines to check)
 
 ## start yarn
