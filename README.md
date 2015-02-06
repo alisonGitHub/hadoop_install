@@ -81,6 +81,7 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 * ln -s /usr/local/jdk-7u75-linux-x64 /usr/local/jdk
 
 ## edit /etc/profile for master
+(:setw synchronize-panes in tmux worked for me)
 
 * sudo vi /etc/profile
   * add following lines
