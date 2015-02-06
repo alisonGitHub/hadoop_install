@@ -5,9 +5,9 @@ I collected many instructions as I could (see the refs below) but select the ste
 Three big steps: install packages and config them and hadoop xml files. I used tmux with the function of synchronize-panes for setting all the machines.
 
 ##machines
-> * pocoyo-1 192.168.1.72 (master)
-> * pocoyo-2 192.168.1.52 (data node)
-> * pocoyo-3 192.168.1.44 (data node)
+* pocoyo-1 192.168.1.72 (master)
+* pocoyo-2 192.168.1.52 (data node)
+* pocoyo-3 192.168.1.44 (data node)
 
 ## edit host
 * vi /etc/hostname
