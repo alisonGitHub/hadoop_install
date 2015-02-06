@@ -33,20 +33,19 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 
 * su - hduser
 * sudo apt-get intall openssh-server 
+* ssh localhost
 
 ##### on master
 
 * ssh-keygen -t rsa -P ""
 * cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-* ssh localhost
-* scp ~/.ssh/id_rsa hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
-* scp ~/.ssh/id_rsa.pub hduser@pocoyo-2:/home/hduser/.ssh/ (do the same for pocoyo-3)
 
 ##### on slaves (pocoyo-2 and pocoyo-3)
-* cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-* ssh localhost
+* mkdir .ssh
 
 ##### on master
+* scp ~/.ssh/* pocoyo-2:~/.ssh (do the same for pocoyo-3, this is good for a fast test not safe!)
+* ssh localhost
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
 
