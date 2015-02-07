@@ -17,10 +17,10 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * sudo vi /etc/hosts
   - add folowing lines, for  each machine or use scp to others
   ```sh
-    - 127.0.0.1 localhost
-    - 192.168.1.72 pocoyo-1 # nameNode
-    - 192.168.1.52 pocoyo-2 # secondary namdNode
-    - 192.168.1.44 pocoyo-3  # data node
+  127.0.0.1 localhost
+  192.168.1.72 pocoyo-1 # nameNode
+  192.168.1.52 pocoyo-2 # secondary namdNode
+  192.168.1.44 pocoyo-3  # data node
   ```
 *sudo scp 192.168.1.72:/etc/hosts /etc/hosts (run this on slaves)
 
@@ -55,9 +55,10 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 (:setw synchronize-panes in tmux worked for me)
 * sudo vi /etc/sysctl.conf
   * add following lines
-    - net.ipv6.conf.all.disable_ipv6 = 1
-    - net.ipv6.conf.default.disable_ipv6 = 1
-    - net.ipv6.conf.lo.disable_ipv6 = 1
+  ```sh
+  net.ipv6.conf.all.disable_ipv6 = 1
+  net.ipv6.conf.default.disable_ipv6 = 1
+  net.ipv6.conf.lo.disable_ipv6 = 1
 
 ##### run
 * sudo service networking restart 
@@ -87,11 +88,13 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
 
 * sudo vi /etc/profile
   * add following lines
-    * export HADOOP_HOME=/usr/local/hadoop
-    * export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-    * export JAVA_HOME=/usr/local/jdk
-    * export CLASSPATH=$JAVA_HOME/lib/tools.jar
-    * export PATH=$JAVA_HOME/bin:$PATH
+```sh
+  export HADOOP_HOME=/usr/local/hadoop
+  export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+  export JAVA_HOME=/usr/local/jdk
+  export CLASSPATH=$JAVA_HOME/lib/tools.jar
+  export PATH=$JAVA_HOME/bin:$PATH
+```
 
 * source /etc/profile
 * java -version ( to test)
@@ -106,10 +109,11 @@ on slaves
 
 #### modify $HADOOP_HOME/etc/hadoop/slaves for all machines
 * add
-  * pocoyo-1
-  * pocoyo-2
-  * pocoyo-3
-
+```sh
+  pocoyo-1
+  pocoyo-2
+  pocoyo-3
+```
 #### copy xml files first
 
 * cd $HADOOP_HOME
