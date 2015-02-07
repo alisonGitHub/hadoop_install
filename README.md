@@ -16,10 +16,12 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 
 * sudo vi /etc/hosts
   - add folowing lines, for  each machine or use scp to others
+  ```sh
     - 127.0.0.1 localhost
     - 192.168.1.72 pocoyo-1 # nameNode
     - 192.168.1.52 pocoyo-2 # secondary namdNode
     - 192.168.1.44 pocoyo-3  # data node
+  ```
 *sudo scp 192.168.1.72:/etc/hosts /etc/hosts (run this on slaves)
 
 ##creat hadoop user and user group for each machine, for each machine
