@@ -24,7 +24,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
   ```
 *sudo scp 192.168.1.72:/etc/hosts /etc/hosts (run this on slaves)
 
-##creat hadoop user and user group for each machine, for each machine
+##creat hadoop user and user group for each machine
 * sudo addgroup hadoop
 * sudo adduser --ingroup hadoop hduser
 * sudo adduser hduser sudo
