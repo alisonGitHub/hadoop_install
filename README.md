@@ -46,8 +46,7 @@ Three big steps: install packages and config them and hadoop xml files. I used t
 * mkdir .ssh
 
 ##### on master
-* scp ~/.ssh/* pocoyo-2:~/.ssh (do the same for pocoyo-3, this is good for a fast test - Not safe!)
-* ssh localhost
+* ssh-copy-id hduser@pocoyo-2 (do the same for pocoyo-3)
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
 
