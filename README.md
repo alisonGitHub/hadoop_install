@@ -60,7 +60,9 @@ Three big steps: install packages and config them and hadoop xml files. I used t
   net.ipv6.conf.lo.disable_ipv6 = 1
 ```
 ##### run
-* sudo service networking restart 
+* sudo service networking restart  or
+* sudo sysctl -p
+
 
 ##download hadoop for each machine 
 (once one dowloaded you can use scp to copy to others)
