@@ -134,7 +134,7 @@ on slaves
 #### modify core-site.xml
 property | value | machines
 -------- | ------ | -------
-fs.defaultFS | hdfs://pocoyo-1:9000 | all 
+fs.defaultFS | hdfs://pocoyo-1:9001 | all 
 hadoop.tmp.dir | /usr/local/hadoop/tmp | all
 io.file.buffer.size | 131072 | all
 
@@ -175,8 +175,13 @@ You should see something looks like below.
 ![Image of screen](https://github.com/alisonGitHub/hadoop_install/blob/master/image/hadoop.png)
 
 ## run some hdfs command
-* hdfs dfs -mkdir hdfs://pocoyo-1:9001/datastore
-* hdfs dfs -copyFromLocal /usr/local/abiffile.txt hdfs://pocoyo-1:9001/datastore
+*if fs.defaultFS and dfs.namenode.rpc-address are same
+  * hdfs dfs -mkdir /datastore
+  * hdfs dfs -copyFromLocal /usr/local/abiffile.txt /datastore
+
+*if fs.defaultFS and dfs.namenode.rpc-address are different, we need specify the post number
+  * hdfs dfs -mkdir hdfs://pocoyo-1:9001/datastore
+  * hdfs dfs -copyFromLocal /usr/local/abiffile.txt hdfs://pocoyo-1:9001/datastore
 
 
 ##refs
