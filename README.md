@@ -95,6 +95,14 @@ we select 1.7 because it is reported on http://wiki.apache.org/hadoop/HadoopJava
   export JAVA_HOME=/usr/local/jdk
   export CLASSPATH=$JAVA_HOME/lib/tools.jar
   export PATH=$JAVA_HOME/bin:$PATH
+  export HADOOP_MAPRED_HOME=$HADOOP_HOME
+  export HADOOP_COMMON_HOME=$HADOOP_HOME
+  export HADOOP_HDFS_HOME=$HADOOP_HOME
+  export HADOOP_HDFS_HOME=$HADOOP_HOME
+  export HADOOP_PREFIX=$HADOOP_HOME
+  export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+  export YARN_HOME=$HADOOP_HOME
+
 ```
 
 * source /etc/profile
@@ -165,6 +173,11 @@ on each machne run
 You should see something looks like below.
 
 ![Image of screen](https://github.com/alisonGitHub/hadoop_install/blob/master/image/hadoop.png)
+
+## run some hdfs command
+* hdfs dfs -mkdir hdfs://pocoyo-1:9001/datastore
+* hdfs dfs -copyFromLocal /usr/local/abiffile.txt hdfs://pocoyo-1:9001/datastore
+
 
 ##refs
 ###for hadoop instllation
