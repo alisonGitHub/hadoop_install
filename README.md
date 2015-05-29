@@ -53,6 +53,10 @@ sudo mv ~/hosts /etc
 * ssh-copy-id hduser@pocoyo-2 (do the same for pocoyo-3)
 * ssh hduser@pocoyo-2
 * ssh hduser@pocoyo-3
+* scp ~/.ssh/*  pocoyo-1:~/.ssh
+* scp ~/.ssh/*  pocoyo-1:~/.ssh
+
+so for all the machines they can ssh each other. 
 
 ##disable ipv6 for each machine
 (:setw synchronize-panes in tmux worked for me)
