@@ -164,6 +164,7 @@ property | value | machines
 -------- | ------ | -------
 yarn.resourcemanager.hostname | pocoyo-1 | resource manager and nodeManager
 yarn.nodemanager.hostname | 0.0.0.0 | nodemanager
+yarn.nodemanager.aux-services | mapreduce_shuffle | all
 
 ## start HDFs
 * ./hdfs namenode -format
@@ -194,6 +195,8 @@ You should see something looks like below.
 
 ##refs
 ###for hadoop instllation
+https://dataheads.wordpress.com/2013/11/21/hadoop-2-setup-on-64-bit-ubuntu-12-04-part-1/  (very very good one)
+
 http://www.rohitmenon.com/index.php/how-to-install-hadoop-on-ubuntulinux-mint/ (very good for single node but no yarn)
 
 http://disi.unitn.it/~lissandrini/notes/installing-hadoop-on-ubuntu-14.html (vert clear and easy to follow)
